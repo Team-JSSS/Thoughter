@@ -10,4 +10,11 @@ header ul {
 header li {
   margin-right: 1em; }
 
+main {
+  display: flex; }
+  main fieldset {
+    width: 40%;
+    margin: 1em;
+    border: none; }
+
 /*# sourceMappingURL=main.css.map */

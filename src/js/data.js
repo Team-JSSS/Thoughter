@@ -4,12 +4,29 @@
   window.thoughtApp = window.thoughtApp || {};
 
 
-  fetch('https://thoughter.herokuapp.com/api/Thoughts', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({ content: 'Here is another thought', authorId: '58bc534499d47e001124898e' })
-  });
+/**
+ *
+ */
+  document.querySelector('form')
+    .addEventListener('submit', function addNewThought(eventObj){
+      eventObj.preventDefault();
+      console.log(eventObj.target.childNodes[1].value);
+
+      fetch('https://thoughter.herokuapp.com/api/Thoughts', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          content: eventObj.target.childNodes[1].value
+        })
+      }).then( function handleResponse( responseObject ){
+        if (responseObject.status > 199 && responseObject.status < 300){
+          responseObject.json().then( function printData(thoughts){
+            console.log(thoughts);
+          });
+        }
+      });
+    });
 
 }());
