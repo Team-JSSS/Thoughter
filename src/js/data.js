@@ -13,7 +13,6 @@
   });
 
   window.thoughtApp.getThoughts = function getThoughts() {
-
     fetch(
       'https://thoughter.herokuapp.com/api/Thoughts?filter={"limit":20}',
       {
@@ -24,13 +23,12 @@
       }
     ).then(function responseHandler(response) {
       response.json().then(function getData(data) {
-        console.log("data test", data);
-
+        // call a function...
+        window.thoughtApp.buildList(data);
       });
     });
   };
-  //here's a change to this file! I'm going to push now!
 
 
-
+  window.thoughtApp.getThoughts();
 }());
