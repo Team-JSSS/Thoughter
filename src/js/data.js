@@ -12,4 +12,13 @@
     body: JSON.stringify({ content: 'Here is another thought', authorId: '58bc534499d47e001124898e' })
   });
 
+  fetch('https://thoughter.herokuapp.com/api/Thoughts', {
+    method: 'GET',
+    headers {
+      'Content-Type': 'application/json'
+    },
+  }).then().filter(20);
+
+
+
 }());
