@@ -1,5 +1,8 @@
 header .glyphicon {
   display: block; }
+header nav {
+  margin: 0;
+  padding: 1em; }
 header h1 {
   border-bottom: 1px solid #d5cfd5;
   padding-bottom: .5em; }
@@ -9,5 +12,20 @@ header ul {
   list-style: none; }
 header li {
   margin-right: 1em; }
+
+main {
+  display: flex; }
+  main form {
+    display: flex;
+    width: 80%;
+    margin: auto; }
+  main fieldset {
+    width: 40%;
+    margin: 1em;
+    border: none; }
+    main fieldset section {
+      display: flex; }
+      main fieldset section .input-group-addon {
+        padding-right: 1.5em; }
 
 /*# sourceMappingURL=main.css.map */

@@ -2,8 +2,12 @@ header {
 
 .glyphicon{
     display: block;
-
 }
+
+  nav{
+    margin: 0;
+    padding: 1em;
+  }
 
   h1{
     border-bottom: 1px solid #d5cfd5;
@@ -19,5 +23,29 @@ header {
   li{
     margin-right: 1em;
 
+  }
+}
+
+main{
+  display: flex;
+
+  form{
+    display: flex;
+    width: 80%;
+    margin: auto;
+  }
+
+  fieldset{
+    width:40%;
+    margin: 1em;
+    border: none;
+
+  section{
+    display: flex;
+
+  .input-group-addon{
+    padding-right: 1.5em;
+  }
+  }
   }
 }

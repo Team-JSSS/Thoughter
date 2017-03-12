@@ -12,29 +12,36 @@
       <h1 class='glyphicon glyphicon-send'> Thoughter</h1>
       <nav class='navbar navbar-default'>
         <ul>
-          <li>Recent Thoughts</li>
-          <li>New Thoughts</li>
-          <li>Logout</li>
+          <li><a href="/recent-thoughts.html">Recent Thoughts</a></li>
+          <li><a href="/new-thoughts.html">New Thoughts</a></li>
+          <li><a href="/logout!">Logout</a></li>
         </ul>
       </nav>
     </header>
 
     <main>
 
-      <fieldset>
-        <h2>Login</h2>
-        <input type='text' class='form-control' id='username-input' placeholder='username'>
-        <input type='password' class='form-control' id='password-input' placeholder='password'>
-        <input type="submit" value="Log In" class="selector btn btn-success">
-      </fieldset>
+      <form class='form-group' action='https://thoughter.herokuapp.com/api/Authors' method="post">
+        <fieldset>
+          <h2>Login</h2>
+          <section>
+            <span class="input-group-addon" id='basic-addon1'>@</span>
+            <input type='text' class='form-control' id='username-input' placeholder='username'>
+          </section>
+          <input type='password' class='form-control' id='password-input' placeholder='password'>
+          <input type="submit" value="Log In" class="selector btn btn-success">
+        </fieldset>
 
-      <fieldset>
-        <h2>Create Account</h2>
-        <input type='text' class='form-control' id='username-input' placeholder='username'>
-        <input type='password' class='form-control' id='password-input' placeholder='password'>
-        <input type="submit" value="Create Account" class="selector btn btn-primary">
-      </fieldset>
-
+        <fieldset>
+          <h2>Create Account</h2>
+          <section>
+            <span class="input-group-addon" id='basic-addon1'>@</span>
+            <input type='text' class='form-control' id='username-input' placeholder='username'>
+          </section>
+          <input type='password' class='form-control' id='password-input' placeholder='password'>
+          <input type="submit" value="Create Account" class="selector btn btn-primary">
+        </fieldset>
+      </form>
     </main>
 
     <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
