@@ -58,7 +58,7 @@ id:"58c2eff0d3cb430011fc484c"
 
 
 
-
+  //the following is associated with recent thoughts
   window.thoughtApp.getThoughts = function getThoughts() {
     fetch(
       'https://thoughter.herokuapp.com/api/Thoughts?filter={"limit":20}',

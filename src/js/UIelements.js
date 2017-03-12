@@ -4,6 +4,8 @@
   window.thoughtApp = window.thoughtApp || {};
 
   // make me a fucntion HERE that I can access in another file!
+  
+  // the following is associated with recent thoughts
   window.thoughtApp.buildList = function buildList(data) {
     data.forEach(function createThoughts(thought) {
       $( 'main' )
