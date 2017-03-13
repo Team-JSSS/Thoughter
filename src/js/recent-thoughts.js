@@ -3,7 +3,6 @@
 
   window.thoughtApp = window.thoughtApp || {};
 
-  // make me a fucntion HERE that I can access in another file!
   window.thoughtApp.buildList = function buildList(data) {
     data.forEach(function createThoughts(thought) {
       $( 'main' )
@@ -22,5 +21,25 @@
 
   };
 
+  //the following is associated with recent thoughts
+  window.thoughtApp.getThoughts = function getThoughts() {
+    fetch(
+      'https://thoughter.herokuapp.com/api/Thoughts?filter={"limit":20}',
+      {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      }
+    ).then(function responseHandler(response) {
+      response.json().then(function getData(data) {
+        // call a function...
+        window.thoughtApp.buildList(data);
+      });
+    });
+  };
+
+
+  window.thoughtApp.getThoughts();
 
 }());
