@@ -13,6 +13,11 @@ header ul {
 header li {
   margin-right: 1em; }
 
+.recentThoughtsMain {
+  display: block;
+  width: 90%;
+  margin: auto; }
+
 main {
   display: flex; }
   main form {
