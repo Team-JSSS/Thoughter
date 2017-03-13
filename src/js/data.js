@@ -40,6 +40,7 @@ id:"58c2eff0d3cb430011fc484c"
       eventObj.target.childNodes[1].value ='';
     });
 
+    
 // This code is for the last part of
     // document.querySelector('form')
     // .addEventListener('submit', function loginPasswordSubmit(eventObj) {
