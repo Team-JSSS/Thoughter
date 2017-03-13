@@ -10,13 +10,14 @@
 
           <aside class="panel-heading">
             <!-- set margin on asides to 0 -->
-            <h3 class="panel-title">Posted at [insert time here] on [date]</h3>
+            <h3 class="panel-title">Posted at ${thought.createTime}</h3>
 
           </aside>
           <aside class="panel-body">
             <p>${thought.content}</p>
           </aside>
         </section>` );
+        console.log(thought.createTime);
     });
 
   };
@@ -33,8 +34,12 @@
       }
     ).then(function responseHandler(response) {
       response.json().then(function getData(data) {
-        // call a function...
-        window.thoughtApp.buildList(data);
+        if (response.status > 199 && response.status < 300) {
+          // call a function...
+          window.thoughtApp.buildList(data);
+        } else {
+          console.log('We could not complete your request', reponse.status);
+        }
       });
     });
   };
