@@ -22,7 +22,7 @@
 
           <aside class="panel-heading">
             <!-- set margin on asides to 0 -->
-            <h3 class="panel-title">Posted at ${thought.createTime}</h3>
+            <h3 class="panel-title">Posted at ${time} on ${date}</h3>
 
           </aside>
           <aside class="panel-body">
