@@ -3,6 +3,11 @@
 
   window.thoughtApp = window.thoughtApp || {};
 
+  /**
+   * Creates HTML elements from array of data retreived from API
+   * @param  {Array} data Recent thoughts retrieved from API
+   * @return {void}
+   */
   window.thoughtApp.buildList = function buildList(data) {
     data.forEach(function createThoughts(thought) {
 
@@ -23,6 +28,10 @@
 
   };
 
+  /**
+   * Retrieves data from the API, Ajax call
+   * @return {Promise} Verifies status and converts data back to json format
+   */
   window.thoughtApp.getThoughts = function getThoughts() {
     fetch(
       'https://thoughter.herokuapp.com/api/Thoughts?filter={"order":"createTime DESC", "limit":20}',
