@@ -7,9 +7,9 @@
  * blocking default on thought submit button on new-thoughts.html page
  * outputting the response in this format:
 authorId:null
-content:'Thoughts are like rays of sunshine'
-createTime:'2017-03-10T18:26:56.703Z'
-id:'58c2eff0d3cb430011fc484c'
+content:"Thoughts are like rays of sunshine"
+createTime:"2017-03-10T18:26:56.703Z"
+id:"58c2eff0d3cb430011fc484c"
  *
  */
   document.querySelector('form')
