@@ -36,23 +36,10 @@ id:"58c2eff0d3cb430011fc484c"
       let confirmNewThoughtSubmission = document.createElement('p');
       document.querySelector('form').appendChild(confirmNewThoughtSubmission);
       document.querySelector('p').style.display = 'block';
-      document.querySelector('p').innerText = 'Your blissful thought is dancing amoung angles on clouds!';
+      document.querySelector('new-thoughts-paragraph').innerText = 'Your blissful thought is dancing amoung angles on clouds!';
       eventObj.target.childNodes[1].value ='';
     });
 
-// This code is for the last part of
-    // document.querySelector('form')
-    // .addEventListener('submit', function loginPasswordSubmit(eventObj) {
-    //     console.log(eventObj); //find real eventObj.address
-    //     fetch('https://thoughter.herokuapp.com/api/Author',{
-    //       let username = eventObj.target....value;
-    //       let password = eventObj.target....value;
-    //       let author = {
-    //         username = username,
-    //         password = password
-    //       };
-    //       loginPasswordSubmit(author);
-    //     });
-    // });
+
 
 }());
