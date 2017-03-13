@@ -11,6 +11,12 @@
   window.thoughtApp.buildList = function buildList(data) {
     data.forEach(function createThoughts(thought) {
 
+      let dateAndTime = new Date(thought.createTime);
+      let date = ( (dateAndTime.getMonth() + 1) + '/' + dateAndTime.getDate() + '/' + dateAndTime.getFullYear() );
+      console.log( date );
+      let time = ( (dateAndTime.getHours()) + ':' + (dateAndTime.getMinutes()) );
+      console.log(time);
+
       $( 'main' )
         .append( `<section class="panel panel-info">
 
