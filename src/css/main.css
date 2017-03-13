@@ -13,19 +13,24 @@ header ul {
 header li {
   margin-right: 1em; }
 
-main {
+main.home {
   display: flex; }
-  main form {
+  main.home form {
     display: flex;
     width: 80%;
     margin: auto; }
-  main fieldset {
+  main.home fieldset {
     width: 40%;
     margin: 1em;
     border: none; }
-    main fieldset section {
+    main.home fieldset section {
       display: flex; }
-      main fieldset section .input-group-addon {
+      main.home fieldset section .input-group-addon {
         padding-right: 1.5em; }
+
+main.recent-thoughts h2 {
+  margin: 0 1em; }
+main.recent-thoughts section {
+  margin: 2em; }
 
 /*# sourceMappingURL=main.css.map */
