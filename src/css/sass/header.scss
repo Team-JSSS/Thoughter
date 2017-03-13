@@ -26,7 +26,13 @@ header {
   }
 }
 
-main{
+
+.recentThoughtsMain{
+  display: block;
+  width: 90%;
+  margin: auto;
+}
+main.home {
   display: flex;
 
   form{
