@@ -5,6 +5,7 @@
 
   window.thoughtApp.buildList = function buildList(data) {
     data.forEach(function createThoughts(thought) {
+
       $( 'main' )
         .append( `<section class="panel panel-info">
 
@@ -17,12 +18,11 @@
             <p>${thought.content}</p>
           </aside>
         </section>` );
-        console.log(thought.createTime);
+
     });
 
   };
 
-  //the following is associated with recent thoughts
   window.thoughtApp.getThoughts = function getThoughts() {
     fetch(
       'https://thoughter.herokuapp.com/api/Thoughts?filter={"limit":20}',
