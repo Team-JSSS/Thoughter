@@ -47,7 +47,7 @@
           // call a function...
           window.thoughtApp.buildList(data);
         } else {
-          console.log('We could not complete your request', reponse.status);
+          console.log('We could not complete your request', response.status);
         }
       });
     });
