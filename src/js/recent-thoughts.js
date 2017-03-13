@@ -25,7 +25,7 @@
 
   window.thoughtApp.getThoughts = function getThoughts() {
     fetch(
-      'https://thoughter.herokuapp.com/api/Thoughts?filter={"limit":20}',
+      'https://thoughter.herokuapp.com/api/Thoughts?filter={"order":"createTime DESC", "limit":20}',
       {
         method: 'GET',
         headers: {
